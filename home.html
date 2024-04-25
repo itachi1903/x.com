@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-twitter</title>
+    <link rel="shortcut icon" href="public/images/twitter.png" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/scroll.css">
+</head>
+
+<body class="bg-black text-white relative">
+    <main class="flex container mx-auto ">
+        <section class="first w-fit md:w-1/2 h-screen md:h-fit">
+
+            <div class="logo px-4 w-fit">
+                <img class="invert w-8 my-4" src="public/images/twitter.png">
+            </div>
+            <div class="aside">
+                <ul class="flex flex-col px-2">
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold  hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl ">
+                            home
+                        </span>
+                        <span class="hidden md:block text-xl">Home</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            search
+                        </span>
+                        <span class="hidden md:block text-xl">Explore</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            Notifications
+                        </span>
+                        <span class="hidden md:block text-xl">Notifications</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            mail
+                        </span>
+                        <span class="hidden md:block text-xl">Messages</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            position_bottom_left
+                        </span>
+                        <span class="hidden md:block text-xl">Grok</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            featured_play_list
+                        </span>
+                        <span class="hidden md:block text-xl">Lists</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            Bookmark
+                        </span>
+                        <span class="hidden md:block text-xl">Bookmarks</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            groups
+                        </span>
+                        <span class="hidden md:block text-xl">Communities</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            workspace_premium
+                        </span>
+                        <span class="hidden md:block text-xl">Premium</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            account_circle
+                        </span>
+                        <span class="hidden md:block text-xl">Profile</span>
+                    </li>
+                    <li
+                        class="flex items-center gap-1 w-fit p-2 font-bold hover:cursor-pointer hover:bg-[#1f1f1f] hover:rounded-full">
+                        <span class="material-symbols-outlined text-2xl">
+                            more_horiz
+                        </span>
+                        <span class="hidden md:block text-xl">More</span>
+                    </li>
+                </ul>
+                <div class="cursor-pointer rounded-full bg-blue-700 py-2 text-center text-2xl px-28 w-fit m-auto my-2 hidden md:block">
+                    Post
+                </div>
+            </div>
+            <div class="cursor-pointer items-center justify-between px-4 hidden md:flex">
+                <div class="flex items-center">
+                    <span class="material-symbols-outlined text-[50px]">account_circle</span>
+                    <div>
+                        <h1 class="font-bold" id="right-name"></h1>
+                        <h1 class="text-sm" id="right-username">@hamzabilal2003</h1>
+                    </div>
+                </div>
+                <span class="material-symbols-outlined">more_horiz</span>
+            </div>
+        </section>
+        <section class="second w-full border-0 border-x-2 h-screen overflow-auto md:h-fit">
+
+            <div class="flex items-center border-0  border-b-2">
+                <div class="w-full text-2xl font-bold text-center hover:bg-[#232323] py-2 cursor-pointer">For you</div>
+                <div class="w-full text-2xl font-bold text-center hover:bg-[#232323] py-2 cursor-pointer">Following
+                </div>
+                <span class="material-symbols-outlined mx-2 block text-2xl py-2 cursor-pointer">settings</span>
+            </div>
+            <div class="flex flex-col gap-4 border-b-2 py-4">
+                <div class="flex px-4 gap-2 items-center">
+                    <span class="material-symbols-outlined text-[50px]">account_circle</span>
+                    <textarea id="imgless-des" placeholder="What is happening ?"
+                        class="bg-transparent resize-none outline-none h-10 w-full"></textarea>
+                </div>
+                <div class="flex gap-2 px-4 items-center justify-between">
+                    <div class="posting-icon" id="posting-open">
+                        <span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-[#ffffff7c] md:text-[30px] post-icons" >image</span>
+                        <span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-[#ffffff7c] md:text-[30px] post-icons" >gif_box</span>
+                        <span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-[#ffffff7c] md:text-[30px] post-icons" >lists</span>
+                        <span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-[#ffffff7c] md:text-[30px] post-icons" >mood</span>
+                        <span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-[#ffffff7c] md:text-[30px] post-icons" >calendar_clock</span>
+                        <span class="material-symbols-outlined text-[20px] cursor-pointer hover:text-[#ffffff7c] md:text-[30px] post-icons" >location_on</span>
+                    </div>
+                    <div class="bg-blue-600 py-2 px-4 rounded-full cursor-pointer " id="imgless-post">
+                        Post
+                    </div>
+                </div>
+            </div>
+            <div class="post-can">
+                <div class="flex p-4 post gap-1 border-0  border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Hamza Bilal</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@hamzabilal2003</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm">Ego says, 'Once everything falls into place, I'll feel peace.' Spirit says,
+                                'Find your peace, and then everything will fall into place.</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="public/images/postImg.jpeg" alt="post-image"
+                                    class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can">
+                                <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Muhammad Shahroz</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@shz_xd</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm">Pride makes us artificial and humility makes us real</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="post-image" class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Albert Steve</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@albert2321</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm">Ego is just like dust in the eyes. Without clearing the dust, we can't see
+                                anything clearly, so clear the ego and see the world</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0CUEecZ6UBlSw2TQk1mjxoU0WwFxOl2x-LywXcWJhKg&s"
+                                    alt="post-image" class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1> 
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Ali Noraz</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@alinoraz12</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm">Pride makes us independent. Humility makes us interdependent.</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHVbJefsLFViL9yXkz_grEzlsVx9aqIHyTFg&s"
+                                    alt="post-image" class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Ramish Ramzan</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@itx_ramish2001</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm">A strong ego is necessary to face life; without it, we are lost.</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="public/images/postImg.jpeg" alt="post-image"
+                                    class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Muhammad Shahroz</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@shz_xd</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm">Ego is the anesthesia that deadens the pain of stupidity.</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Itpj1SWI_Ivqhqj60cchGJYntrHsmLvmSw&s"
+                                    alt="post-image" class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Hamza Bilal</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@hamzabilal2003</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm"><b>bro</b> @shz_xd,<br>check this out bro gojo going to fight sukuna.</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="post-image" class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 post gap-1 border-0 border-b-2">
+                    <span class="part1-post material-symbols-outlined text-[50px] w-fit">account_circle</span>
+                    <div class="part2-post w-full">
+                        <div class="header-of-post">
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-1 flex-col md:flex-row">
+                                    <h1 class="text-xl">Muhammad Shahroz</h1>
+                                    <span class="text-[15px] text-[#ffffff7c]">@shz_xd</span>
+                                </div>
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <p class="text-lg text-[10px] md:text-sm"><b>Geto</b><br> Gojo only friend</p>
+                            <div class="my-4  bg-[#ffffff25] rounded-xl py-2">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="post-image" class="block w-full max-h-[60vh] object-contain rounded-xl">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] commentBtn">mode_comment</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">swap_calls</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c] likebtn">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">bar_chart</span>
+                                <div class="flex items-center">
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">Bookmark</span>
+                                    <span
+                                        class="material-symbols-outlined cursor-pointer hover:text-[#ffffff7c]">ios_share</span>
+                                </div>
+                            </div>
+                            <div class="py-4 commentcontainer" style="display: none;">
+                                <h1>Comments</h1>
+                                <div class="comment-can py-4">
+                                    <div class="comment flex gap-2">
+                                        <span class="material-symbols-outlined text-[30px]">account_circle</span>
+                                        <div class="flex flex-col">
+                                            <h1>@hamzabilal</h1>
+                                            <h2 class="text-sm">looking good</h2>
+                                        </div>
+                                    </div>
+                                    <div class="commentpost mt-4 flex gap-2">
+                                        <input type="text" class="comment-info w-full rounded-full outline-none text-black px-4 py-1">
+                                        <input type="submit" value="post" class="px-4 rounded-full bg-white text-black postcomment">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="third  w-1/2 md:w-full hidden lg:block">
+            <div class=" p-4 relative">
+                <div class="bg-[#232323] flex items-center px-3 py-2 rounded-full">
+                    <label for="search" class="flex">
+                        <span class="material-symbols-outlined pr-2 text-gray-400 hover:text-white">search</span>
+                    </label>
+                    <input type="text" id="search" class="w-full bg-transparent border-0 outline-none"
+                        placeholder="Search">
+                </div>
+            </div>
+            <div class=" p-4 ">
+                <div class="border flex flex-col gap-2 rounded-3xl px-4 py-2 ">
+                    <h1 class="font-bold text-xl">Subscribe to Premium</h1>
+                    <p class="text-sm">Subscribe to unlock new features and if eligible, receive a share of ads revenue.
+                    </p>
+                    <span
+                        class="block rounded-full bg-[#1f1f1f] w-fit py-2 px-4 cursor-pointer hover:bg-gray-700">Subscribe</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="border flex flex-col gap-3 rounded-3xl px-4 py-2  overflow-auto">
+                    <div class="flex items-center justify-between">
+                        <h1 class="font-bold text-xl"> Explore</h1>
+                        <span class="rounded bg-red-700 py-1 px-2 text-sm">beta</span>
+                    </div>
+                    <div class="h-[40vh] overflow-auto">
+                        <div class="border-0 border-b">
+                            <h1 class="font-bold text-sm">PSX Soars to Historic 72,000 Points</h1>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined">groups</span>
+                                <span class="text-sm">2 hours ago · Finance</span>
+                            </div>
+                        </div>
+                        <div class="border-0 border-b">
+                            <h1 class="font-bold text-sm">Pakistan's Tax Evasion Crisis: Rs 300 Billion Lost</h1>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined">groups</span>
+                                <span class="text-sm">Trending now · Economy</span>
+                            </div>
+                        </div>
+                        <div class="border-0 border-b">
+                            <h1 class="font-bold text-sm">Balochistan's Missing Persons Controversy: Unmasking the Truth
+                            </h1>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined">groups</span>
+                                <span class="text-sm">Trending now · Politics</span>
+                            </div>
+                        </div>
+                        <div class="border-0 border-b">
+                            <h1 class="font-bold text-sm"> Ten Hag's United: FA Cup Final Charge</h1>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined">groups</span>
+                                <span class="text-sm">15 hours ago · Soccer</span>
+                            </div>
+                        </div>
+                        <div class="border-0 border-b">
+                            <h1 class="font-bold text-sm">PSX Soars to Historic 72,000 Points</h1>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined">groups</span>
+                                <span class="text-sm">2 hours ago · Finance</span>
+                            </div>
+                        </div>
+                        <div class="border-0 border-b">
+                            <h1 class="font-bold text-sm">Pakistan's Tax Evasion Crisis: Rs 300 Billion Lost</h1>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined">groups</span>
+                                <span class="text-sm">Trending now · Economy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-xl text-blue-400 cursor-pointer">See More</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="border flex flex-col gap-3 rounded-3xl px-4 py-2 ">
+                    <h1 class="font-bold text-xl mb-4">Who to follow</h1>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="block material-symbols-outlined text-5xl">account_circle</span>
+                            <div class="w-full">
+                                <h1 class="font-bold text-sm">Hamza Bilal</h1>
+                                <h2 class="text-sm">@hamzabilal2003</h2>
+                            </div>
+                        </div>
+                        <span class="w-fit rounded-full bg-white text-black font-bold py-1 px-2">Follow</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="block material-symbols-outlined text-5xl">account_circle</span>
+                            <div class="w-full">
+                                <h1 class="font-bold text-sm">Muhammad Shahroz <h1>
+                                <h2 class="text-sm">@shz_xd0921</h2>
+                            </div>
+                        </div>
+                        <span class="w-fit rounded-full bg-white text-black font-bold py-1 px-2">Follow</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="block material-symbols-outlined text-5xl">account_circle</span>
+                            <div class="w-full">
+                                <h1 class="font-bold text-sm">Alexandra Johnson</h1>
+                                <h2 class="text-sm">@alex_johnson23</h2>
+                            </div>
+                        </div>
+                        <span class="w-fit rounded-full bg-white text-black font-bold py-1 px-2">Follow</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="block material-symbols-outlined text-5xl">account_circle</span>
+                            <div class="w-full">
+                                <h1 class="font-bold text-sm">Ethan Smith</h1>
+                                <h2 class="text-sm">@ethan_smith789</h2>
+                            </div>
+                        </div>
+                        <span class="w-fit rounded-full bg-white text-black font-bold py-1 px-2">Follow</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="block material-symbols-outlined text-5xl">account_circle</span>
+                            <div class="w-full">
+                                <h1 class="font-bold text-sm">Isabella Martinez</h1>
+                                <h2 class="text-sm">@isabella_mtz</h2>
+                            </div>
+                        </div>
+                        <span class="w-fit rounded-full bg-white text-black font-bold py-1 px-2">Follow</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="block material-symbols-outlined text-5xl">account_circle</span>
+                            <div class="w-full">
+                                <h1 class="font-bold text-sm">Daniel Brown</h1>
+                                <h2 class="text-sm">@danielbrown_91</h2>
+                            </div>
+                        </div>
+                        <span class="w-fit rounded-full bg-white text-black font-bold py-1 px-2">Follow</span>
+                    </div>
+                    <span class="text-xl text-blue-400 cursor-pointer">See more</span>
+                </div>
+            </div>
+            <div class="p-4">
+                <ul class="flex gap-2 flex-wrap text-gray-500">
+                    <li class="text-gray-500 hover:underline cursor-pointer">Terms of Service</li>
+                    <li class="text-gray-500 hover:underline cursor-pointer">Privacy Policy</li>
+                    <li class="text-gray-500 hover:underline cursor-pointer">Cookie Policy</li>
+                    <li class="text-gray-500 hover:underline cursor-pointer">Accessibility</li>
+                    <li class="text-gray-500 hover:underline cursor-pointer">Ads Info</li>
+                    <li class="text-gray-500 hover:underline cursor-pointer flex items-center">More <span
+                            class="material-symbols-outlined">more_horiz</span> </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <section id="post" class="flex flex-col gap-2 bg-[#232323] border-2 border-white absolute top-4 left-1/2 z-10 p-4 rounded-lg -translate-x-1/2 ">
+        <div class="flex justify-between">
+            <h1 class="uppercase pr-4">share your thoughts,moments and experiences</h1>
+            <span class="material-symbols-outlined cursor-pointer" id="posting-close">close</span>
+        </div>
+        <div class="flex gap-1 items-center">
+            <span class="material-symbols-outlined text-[50px]">account_circle</span>
+            <div>
+                <h1 id="post-name">hamza</h1>
+                <h2 class="text-sm" id="post-username">@hamzabilal2003</h2>
+            </div>
+        </div>
+        <textarea id="des" placeholder="Share your thoughts" class="bg-transparent w-full resize-none outline-none border-0"></textarea>
+        <img src="" class="w-full h-[20vh] border-2 bg-[#ffffff7c] object-contain" id="img">
+        <input type="file" id="fileimg" accept="image/*">
+        <input type="submit" id="btn" class="w-fit py-2 text-xl hover:underline cursor-pointer">    
+    </section>
+    <script src="src/script.js"></script>
+</body>
+</html>
